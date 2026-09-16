@@ -47,4 +47,14 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function Tickets()
+    {
+        return $this->hasMany(Ticket::class);
+    }
+
+    public function TicketReplies()
+    {
+        return $this->hasMany(TicketReply::class);
+    }
 }
